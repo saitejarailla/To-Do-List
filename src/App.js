@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AddToDo from './components/AddToDo';
+import CountToDo from './components/CountToDo'
+import DisplayToDo from'./components/DisplayToDo'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body'>
+    <div className="container">
+      <div className='row'>
+        <div className='col-sm-4 text-info'>
+          <AddToDo></AddToDo>
+        </div>
+        <div className='col-sm-4 text-info'>
+           <DisplayToDo></DisplayToDo>
+        </div>
+        <div className='col-sm-4 text-info'>
+          <CountToDo></CountToDo>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }
